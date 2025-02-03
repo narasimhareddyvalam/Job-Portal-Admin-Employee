@@ -1,1 +1,57 @@
-Web Design Assignment 10
+Job Portal - Admin & Employee
+
+Project Overview
+
+This project is a React-based Job Portal with Redux for state management, role-based authentication, and REST API integration using Node.js, Express, and MongoDB. It features separate functionalities for Admins (who can add jobs) and Employees (who can view job listings).
+
+Tech Stack
+
+Frontend: React, Redux, Axios, React Router, Material UI/React Bootstrap
+
+Backend: Node.js, Express, MongoDB, Mongoose
+
+Authentication: Role-based login using stored user credentials
+
+Features
+
+1. Authentication & Role-Based Access
+
+Login Page: Users (Admins & Employees) log in using stored credentials.
+
+Role-Based Routing:
+
+Admins can access the Admin Dashboard and Add Jobs page.
+
+Employees can only access the Jobs Page.
+
+No pages are accessible without login.
+
+Session Management: Redux stores user authentication state.
+
+2. Admin Functionalities
+
+Modify POST /user/create API to include a type field (admin or employee).
+
+Admin Portal:
+
+"Employees" page displays a table of all registered users.
+
+"Add Jobs" page allows admins to create job postings (Company Name, Job Title, Description, Salary).
+
+Jobs are stored in MongoDB.
+
+3. Employee Functionalities
+
+Retrieve available jobs from GET /get/jobs API.
+
+Employee Portal:
+
+Displays available job listings dynamically using Redux state.
+
+Uses Material UI Cards for job details.
+
+4. Redux for State Management
+
+Centralized authentication state and job listings state using Redux.
+
+Redux Middleware (Thunk) for async API calls.
